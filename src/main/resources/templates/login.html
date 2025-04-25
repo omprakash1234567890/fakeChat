@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Instagram</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #fafafa; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .login-box { background: white; padding: 40px; border: 1px solid #ccc; width: 300px; text-align: center; }
+        input { width: 90%; padding: 8px; margin: 10px 0; }
+        button { width: 100%; padding: 10px; background-color: #3897f0; color: white; border: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Instagram</h2>
+        <form th:action="@{/login}" method="post">
+            <input type="text" name="username" placeholder="Phone number, username or email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+        <p th:text="${message}"></p>
+    </div>
+</body>
+</html>
